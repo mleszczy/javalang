@@ -902,7 +902,7 @@ class Parser(object):
             throws = self.parse_qualified_identifier_list()
 
         if self.would_accept('{'):
-            body = self.parse_block()
+            body = tree.BlockStatement(statements=self.parse_block())
         else:
             self.accept(';')
 
@@ -1079,7 +1079,7 @@ class Parser(object):
             throws = self.parse_qualified_identifier_list()
 
         if self.would_accept('{'):
-            body = self.parse_block()
+            body = tree.BlockStatement(statements=self.parse_block())
         else:
             self.accept(';')
 
@@ -1098,7 +1098,7 @@ class Parser(object):
             throws = self.parse_qualified_identifier_list()
 
         if self.would_accept('{'):
-            body = self.parse_block()
+            body = tree.BlockStatement(statements=self.parse_block())
         else:
             self.accept(';')
 
